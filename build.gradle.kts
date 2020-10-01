@@ -5,16 +5,23 @@ group = "no.nav.pensjonsamhandling"
 repositories {
     mavenCentral()
     maven(url = "https://dl.bintray.com/gradle/gradle-plugins")
-    maven(url = "http://packages.confluent.io/maven/")
+    maven(url = "https://packages.confluent.io/maven/")
 }
 
 plugins {
     `maven-publish`
     id("com.commercehub.gradle.plugin.avro") version "0.9.1" //https://github.com/davidmc24/gradle-avro-plugin
+    id("se.patrikerdes.use-latest-versions") version "0.2.14"
+    id("net.researchgate.release") version "2.8.1"
 }
 
 dependencies {
     implementation("org.apache.avro:avro:$avroVersion")
+}
+
+release {
+    newVersionCommitMessage = "[Release Plugin] - next version commit: "
+    tagTemplate = "release-\${version}"
 }
 
 publishing {
@@ -33,4 +40,8 @@ publishing {
             }
         }
     }
+}
+
+tasks.withType<Wrapper> {
+    gradleVersion = "6.6"
 }
