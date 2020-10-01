@@ -1,0 +1,16 @@
+{
+   "namespace":"no.nav.samordning.pgi.schema",
+   "type":"record",
+   "name":"HendelseKey",
+   "doc":"https://skatteetaten.github.io/datasamarbeid-api-dokumentasjon/reference_feed",
+   "fields":[
+      {
+         "name":"identifikator",
+         "type":"string"
+      },
+      {
+         "name":"inntektsAar",
+         "type":"string"
+      }
+   ]
+}

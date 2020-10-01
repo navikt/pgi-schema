@@ -1,0 +1,16 @@
+{
+   "namespace":"no.nav.samordning.pgi.schema",
+   "type":"record",
+   "name":"PensjonsgivendeInntekt",
+   "doc":"TODO",
+   "fields":[
+      {
+         "name":"identifikator",
+         "type":"string"
+      },
+      {
+         "name":"inntektsAar",
+         "type":"string"
+      }
+   ]
+}
