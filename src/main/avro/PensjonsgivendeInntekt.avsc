@@ -2,15 +2,56 @@
    "namespace":"no.nav.samordning.pgi.schema",
    "type":"record",
    "name":"PensjonsgivendeInntekt",
-   "doc":"TODO",
+   "doc":"Samling av pensjonsgivende inntekt fra forskjellig skatteordninger.",
    "fields":[
-      {
-         "name":"identifikator",
-         "type":"string"
-      },
-      {
-         "name":"inntektsAar",
-         "type":"string"
-      }
-   ]
+        {
+            "name":"norskPersonidentifikator",
+            "type":"string"
+        },
+        {
+            "name":"inntektsaar",
+            "type":"string"
+        },
+        {
+            "name":"pensjonsgivendeInntekt",
+            "type":{
+                "type": "array",
+                "items":{
+                    "name":"PensjonsgivendeInntektPerOrdning",
+                    "type":"record",
+                    "doc":"Pesjonsgivende inntekt per skatteordning",
+                    "fields":[
+                        {
+                            "name":"skatteordning",
+                            "type":{
+                               "type": "enum",
+                               "name": "Skatteordning",
+                               "symbols" : ["FASTLAND", "KILDESKATT_PAA_LOENN", "SVALBARD"]
+                            }
+                        },
+                        {
+                            "name":"datoForFastetting",
+                            "type":"string"
+                        },
+                        {
+                            "name":"pensjonsgivendeInntektAvLoennsinntekt",
+                            "type":["long", "null"]
+                        },
+                        {
+                            "name":"pensjonsgivendeInntektAvLoennsinntektBarePensjonsdel",
+                            "type":["long", "null"]
+                        },
+                        {
+                            "name":"pensjonsgivendeInntektAvNaeringsinntekt",
+                            "type":["long", "null"]
+                        },
+                        {
+                            "name":"pensjonsgivendeInntektAvNaeringsinntektFraFiskeFangstEllerFamiliebarnehage",
+                            "type":["long", "null"]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
 }
