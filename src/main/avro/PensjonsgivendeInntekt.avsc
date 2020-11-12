@@ -10,7 +10,7 @@
         },
         {
             "name":"inntektsaar",
-            "type":"string"
+            "type":"long"
         },
         {
             "name":"pensjonsgivendeInntekt",
@@ -19,7 +19,7 @@
                 "items":{
                     "name":"PensjonsgivendeInntektPerOrdning",
                     "type":"record",
-                    "doc":"Pesjonsgivende inntekt per skatteordning",
+                    "doc":"Pensjonsgivende inntekt per skatteordning",
                     "fields":[
                         {
                             "name":"skatteordning",
@@ -30,7 +30,7 @@
                             }
                         },
                         {
-                            "name":"datoForFastetting",
+                            "name":"datoForFastsetting",
                             "type":"string"
                         },
                         {
