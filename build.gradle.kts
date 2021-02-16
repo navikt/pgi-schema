@@ -1,6 +1,6 @@
 val avroVersion = "1.10.0"
 
-group = "no.nav.pensjonsamhandling"
+group = "no.nav.pgi"
 
 repositories {
     mavenCentral()
