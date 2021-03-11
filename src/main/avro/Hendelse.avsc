@@ -19,7 +19,7 @@
         {
         "name":"metaData",
         "type":{
-                "name":"MetadataHendelse",
+                "name":"HendelseMetadata",
                 "type":"record",
                 "doc":"Metadata for pgi",
                 "fields":[
