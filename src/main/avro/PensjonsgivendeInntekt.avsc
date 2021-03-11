@@ -52,6 +52,24 @@
                     ]
                 }
             }
+        },
+        {
+        "name":"metaData",
+        "type":{
+                "name":"MetadataPensjonsgivendeInntekt",
+                "type":"record",
+                "doc":"Metadata for pgi",
+                "fields":[
+                    {
+                        "name":"retries",
+                        "type":"long"
+                    },
+                    {
+                        "name":"sekvensnummer",
+                        "type":"long"
+                    }
+                ]
+            }
         }
     ]
 }

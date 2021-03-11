@@ -4,17 +4,31 @@
    "name":"Hendelse",
    "doc":"https://skatteetaten.github.io/datasamarbeid-api-dokumentasjon/reference_feed",
    "fields":[
-      {
-         "name":"sekvensnummer",
-         "type":"long"
-      },
-      {
-         "name":"identifikator",
-         "type":"string"
-      },
-      {
-         "name":"gjelderPeriode",
-         "type":"string"
-      }
+        {
+            "name":"sekvensnummer",
+            "type":"long"
+        },
+        {
+            "name":"identifikator",
+            "type":"string"
+        },
+        {
+            "name":"gjelderPeriode",
+            "type":"string"
+        },
+        {
+        "name":"metaData",
+        "type":{
+                "name":"MetadataHendelse",
+                "type":"record",
+                "doc":"Metadata for pgi",
+                "fields":[
+                    {
+                        "name":"retries",
+                        "type":"long"
+                    }
+                ]
+            }
+        }
    ]
 }
