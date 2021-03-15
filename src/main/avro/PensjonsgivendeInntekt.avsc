@@ -55,7 +55,7 @@
         },
         {
         "name":"metaData",
-        "type":{
+        "type":[{
                 "name":"PensjonsgivendeInntektMetadata",
                 "type":"record",
                 "doc":"Metadata for pgi",
@@ -70,6 +70,7 @@
                     }
                 ]
             }
+            , "null"]
         }
     ]
 }

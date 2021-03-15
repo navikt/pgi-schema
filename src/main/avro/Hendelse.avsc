@@ -18,7 +18,7 @@
         },
         {
         "name":"metaData",
-        "type":{
+        "type":[{
                 "name":"HendelseMetadata",
                 "type":"record",
                 "doc":"Metadata for pgi",
@@ -28,7 +28,7 @@
                         "type":"long"
                     }
                 ]
-            }
+            }, "null"]
         }
    ]
 }
