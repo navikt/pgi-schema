@@ -55,6 +55,7 @@
         },
         {
         "name":"metaData",
+        "default": "null",
         "type":[{
                 "name":"PensjonsgivendeInntektMetadata",
                 "type":"record",

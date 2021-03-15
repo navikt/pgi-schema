@@ -18,6 +18,7 @@
         },
         {
         "name":"metaData",
+        "default": "null",
         "type":[{
                 "name":"HendelseMetadata",
                 "type":"record",
